@@ -12,7 +12,9 @@
 		467F48FB23C6230200AC9386 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467F48FA23C6230200AC9386 /* ViewController.swift */; };
 		467F48FE23C6230200AC9386 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467F48FC23C6230200AC9386 /* Main.storyboard */; };
 		467F490023C6230300AC9386 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 467F48FF23C6230300AC9386 /* Assets.xcassets */; };
-		467F490323C6230300AC9386 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467F490123C6230300AC9386 /* LaunchScreen.storyboard */; };
+		467F491023C623B000AC9386 /* Internet Screen Topics Impact_URLs(1).pdf in Resources */ = {isa = PBXBuildFile; fileRef = 467F490D23C623B000AC9386 /* Internet Screen Topics Impact_URLs(1).pdf */; };
+		467F491123C623B000AC9386 /* On University of Texas at Dallas’ growing campus, meal-delivering robots make splashy debut.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 467F490E23C623B000AC9386 /* On University of Texas at Dallas’ growing campus, meal-delivering robots make splashy debut.pdf */; };
+		467F491223C623B000AC9386 /* Internet Screen Topics Terms(1).pdf in Resources */ = {isa = PBXBuildFile; fileRef = 467F490F23C623B000AC9386 /* Internet Screen Topics Terms(1).pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,8 +24,10 @@
 		467F48FA23C6230200AC9386 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		467F48FD23C6230200AC9386 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		467F48FF23C6230300AC9386 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		467F490223C6230300AC9386 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		467F490423C6230300AC9386 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		467F490D23C623B000AC9386 /* Internet Screen Topics Impact_URLs(1).pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Internet Screen Topics Impact_URLs(1).pdf"; path = "../../../../../Downloads/Internet Screen Topics Impact_URLs(1).pdf"; sourceTree = "<group>"; };
+		467F490E23C623B000AC9386 /* On University of Texas at Dallas’ growing campus, meal-delivering robots make splashy debut.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "On University of Texas at Dallas’ growing campus, meal-delivering robots make splashy debut.pdf"; path = "../../../../../Downloads/On University of Texas at Dallas’ growing campus, meal-delivering robots make splashy debut.pdf"; sourceTree = "<group>"; };
+		467F490F23C623B000AC9386 /* Internet Screen Topics Terms(1).pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Internet Screen Topics Terms(1).pdf"; path = "../../../../../Downloads/Internet Screen Topics Terms(1).pdf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,41 @@
 		467F48F523C6230200AC9386 /* InternetNetworkingApp */ = {
 			isa = PBXGroup;
 			children = (
-				467F48F623C6230200AC9386 /* AppDelegate.swift */,
-				467F48F823C6230200AC9386 /* SceneDelegate.swift */,
-				467F48FA23C6230200AC9386 /* ViewController.swift */,
-				467F48FC23C6230200AC9386 /* Main.storyboard */,
-				467F48FF23C6230300AC9386 /* Assets.xcassets */,
-				467F490123C6230300AC9386 /* LaunchScreen.storyboard */,
-				467F490423C6230300AC9386 /* Info.plist */,
+				467F490A23C6232F00AC9386 /* Resources */,
+				467F490C23C6235000AC9386 /* Controller */,
+				467F490B23C6234A00AC9386 /* View */,
 			);
 			path = InternetNetworkingApp;
+			sourceTree = "<group>";
+		};
+		467F490A23C6232F00AC9386 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				467F490D23C623B000AC9386 /* Internet Screen Topics Impact_URLs(1).pdf */,
+				467F490F23C623B000AC9386 /* Internet Screen Topics Terms(1).pdf */,
+				467F490E23C623B000AC9386 /* On University of Texas at Dallas’ growing campus, meal-delivering robots make splashy debut.pdf */,
+				467F48F623C6230200AC9386 /* AppDelegate.swift */,
+				467F48F823C6230200AC9386 /* SceneDelegate.swift */,
+				467F48FF23C6230300AC9386 /* Assets.xcassets */,
+				467F490423C6230300AC9386 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		467F490B23C6234A00AC9386 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				467F48FC23C6230200AC9386 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		467F490C23C6235000AC9386 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				467F48FA23C6230200AC9386 /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,7 +155,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				467F490323C6230300AC9386 /* LaunchScreen.storyboard in Resources */,
+				467F491023C623B000AC9386 /* Internet Screen Topics Impact_URLs(1).pdf in Resources */,
+				467F491123C623B000AC9386 /* On University of Texas at Dallas’ growing campus, meal-delivering robots make splashy debut.pdf in Resources */,
+				467F491223C623B000AC9386 /* Internet Screen Topics Terms(1).pdf in Resources */,
 				467F490023C6230300AC9386 /* Assets.xcassets in Resources */,
 				467F48FE23C6230200AC9386 /* Main.storyboard in Resources */,
 			);
@@ -153,14 +185,6 @@
 				467F48FD23C6230200AC9386 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		467F490123C6230300AC9386 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				467F490223C6230300AC9386 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
