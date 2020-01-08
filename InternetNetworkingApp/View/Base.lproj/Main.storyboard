@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IqD-pu-JVc">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
@@ -7,31 +7,32 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Internet Detail View Controller-->
         <scene sceneID="gsx-zB-7kz">
             <objects>
-                <viewController id="AZv-wx-6hs" sceneMemberID="viewController">
+                <viewController id="AZv-wx-6hs" customClass="InternetDetailViewController" customModule="InternetNetworkingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c8V-lU-9lf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="JLi-Gp-PPR"/>
                     </view>
+                    <navigationItem key="navigationItem" id="2Jm-8o-cvi"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QKU-I0-BBy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="80" y="59"/>
+            <point key="canvasLocation" x="989.85507246376824" y="58.928571428571423"/>
         </scene>
-        <!--Root View Controller-->
+        <!--CSP Internet App-->
         <scene sceneID="qVT-lZ-EYg">
             <objects>
-                <tableViewController clearsSelectionOnViewWillAppear="NO" id="Z8i-gB-xnD" sceneMemberID="viewController">
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="Z8i-gB-xnD" customClass="InternetMasterViewController" customModule="InternetNetworkingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="cVi-Ud-ves">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="dgT-vy-BQT">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier=" internetRow" id="dgT-vy-BQT">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dgT-vy-BQT" id="JiC-kx-W7c">
@@ -45,7 +46,7 @@
                             <outlet property="delegate" destination="Z8i-gB-xnD" id="Egk-WK-mnx"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="8nS-7b-pm2"/>
+                    <navigationItem key="navigationItem" title="CSP Internet App" id="8nS-7b-pm2"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S5u-Y0-sNw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -73,12 +74,30 @@
                 <splitViewController id="IqD-pu-JVc" sceneMemberID="viewController">
                     <connections>
                         <segue destination="83q-97-OUn" kind="relationship" relationship="masterViewController" id="fgS-wZ-nvB"/>
-                        <segue destination="AZv-wx-6hs" kind="relationship" relationship="detailViewController" id="OZ9-nh-Aq8"/>
+                        <segue destination="9SC-Fq-h69" kind="relationship" relationship="detailViewController" id="OZ9-nh-Aq8"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7WV-B8-MKY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-839" y="-265"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="R8Y-wV-Hs2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9SC-Fq-h69" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6wa-KK-H7k">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="AZv-wx-6hs" kind="relationship" relationship="rootViewController" id="SMS-Pt-Gja"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lau-n4-zra" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="79.710144927536234" y="58.928571428571423"/>
         </scene>
     </scenes>
 </document>
