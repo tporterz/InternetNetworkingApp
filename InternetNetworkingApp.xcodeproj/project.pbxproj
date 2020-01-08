@@ -12,9 +12,9 @@
 		467F48FB23C6230200AC9386 /* InternetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467F48FA23C6230200AC9386 /* InternetDetailViewController.swift */; };
 		467F48FE23C6230200AC9386 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467F48FC23C6230200AC9386 /* Main.storyboard */; };
 		467F490023C6230300AC9386 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 467F48FF23C6230300AC9386 /* Assets.xcassets */; };
-		467F491023C623B000AC9386 /* Internet Screen Topics Impact_URLs(1).pdf in Resources */ = {isa = PBXBuildFile; fileRef = 467F490D23C623B000AC9386 /* Internet Screen Topics Impact_URLs(1).pdf */; };
-		467F491123C623B000AC9386 /* On University of Texas at Dallas’ growing campus, meal-delivering robots make splashy debut.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 467F490E23C623B000AC9386 /* On University of Texas at Dallas’ growing campus, meal-delivering robots make splashy debut.pdf */; };
-		467F491223C623B000AC9386 /* Internet Screen Topics Terms(1).pdf in Resources */ = {isa = PBXBuildFile; fileRef = 467F490F23C623B000AC9386 /* Internet Screen Topics Terms(1).pdf */; };
+		467F491023C623B000AC9386 /* ImpactURLs.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 467F490D23C623B000AC9386 /* ImpactURLs.pdf */; };
+		467F491123C623B000AC9386 /* MealDeliveringRobots.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 467F490E23C623B000AC9386 /* MealDeliveringRobots.pdf */; };
+		467F491223C623B000AC9386 /* TopicTerms.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 467F490F23C623B000AC9386 /* TopicTerms.pdf */; };
 		467F491423C624DC00AC9386 /* InternetMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467F491323C624DC00AC9386 /* InternetMasterViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,9 +26,9 @@
 		467F48FD23C6230200AC9386 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		467F48FF23C6230300AC9386 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		467F490423C6230300AC9386 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		467F490D23C623B000AC9386 /* Internet Screen Topics Impact_URLs(1).pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Internet Screen Topics Impact_URLs(1).pdf"; path = "../../../../../Downloads/Internet Screen Topics Impact_URLs(1).pdf"; sourceTree = "<group>"; };
-		467F490E23C623B000AC9386 /* On University of Texas at Dallas’ growing campus, meal-delivering robots make splashy debut.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "On University of Texas at Dallas’ growing campus, meal-delivering robots make splashy debut.pdf"; path = "../../../../../Downloads/On University of Texas at Dallas’ growing campus, meal-delivering robots make splashy debut.pdf"; sourceTree = "<group>"; };
-		467F490F23C623B000AC9386 /* Internet Screen Topics Terms(1).pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Internet Screen Topics Terms(1).pdf"; path = "../../../../../Downloads/Internet Screen Topics Terms(1).pdf"; sourceTree = "<group>"; };
+		467F490D23C623B000AC9386 /* ImpactURLs.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = ImpactURLs.pdf; path = ../../../../../Downloads/ImpactURLs.pdf; sourceTree = "<group>"; };
+		467F490E23C623B000AC9386 /* MealDeliveringRobots.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = MealDeliveringRobots.pdf; path = ../../../../../Downloads/MealDeliveringRobots.pdf; sourceTree = "<group>"; };
+		467F490F23C623B000AC9386 /* TopicTerms.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = TopicTerms.pdf; path = ../../../../../Downloads/TopicTerms.pdf; sourceTree = "<group>"; };
 		467F491323C624DC00AC9386 /* InternetMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetMasterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,9 +72,9 @@
 		467F490A23C6232F00AC9386 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				467F490D23C623B000AC9386 /* Internet Screen Topics Impact_URLs(1).pdf */,
-				467F490F23C623B000AC9386 /* Internet Screen Topics Terms(1).pdf */,
-				467F490E23C623B000AC9386 /* On University of Texas at Dallas’ growing campus, meal-delivering robots make splashy debut.pdf */,
+				467F490D23C623B000AC9386 /* ImpactURLs.pdf */,
+				467F490F23C623B000AC9386 /* TopicTerms.pdf */,
+				467F490E23C623B000AC9386 /* MealDeliveringRobots.pdf */,
 				467F48F623C6230200AC9386 /* AppDelegate.swift */,
 				467F48F823C6230200AC9386 /* SceneDelegate.swift */,
 				467F48FF23C6230300AC9386 /* Assets.xcassets */,
@@ -158,9 +158,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				467F491023C623B000AC9386 /* Internet Screen Topics Impact_URLs(1).pdf in Resources */,
-				467F491123C623B000AC9386 /* On University of Texas at Dallas’ growing campus, meal-delivering robots make splashy debut.pdf in Resources */,
-				467F491223C623B000AC9386 /* Internet Screen Topics Terms(1).pdf in Resources */,
+				467F491023C623B000AC9386 /* ImpactURLs.pdf in Resources */,
+				467F491123C623B000AC9386 /* MealDeliveringRobots.pdf in Resources */,
+				467F491223C623B000AC9386 /* TopicTerms.pdf in Resources */,
 				467F490023C6230300AC9386 /* Assets.xcassets in Resources */,
 				467F48FE23C6230200AC9386 /* Main.storyboard in Resources */,
 			);

@@ -10,28 +10,138 @@ import UIKit
 
 class InternetMasterViewController: UITableViewController
 {
-
-    override func viewDidLoad()
+    //MARK:- Date members
+    
+    weak var delegate : InternetDetailDelegate?
+    
+    private lazy var pdfTopics : [String] = [String]()
+    private lazy var internetTopics : [String] = [String]()
+    private lazy var addresses : [String] = [String]()
+    private lazy var files : [String] = [String]()
+    private let rowIdentifier : String = "internetRow"
+    
+    //MARK:- Helper methods
+    
+    private func setupDetailContents() -> Void
+    {
+        internetTopics = [
+        "Standard Search Engine",
+        "AP CSP",
+        "Canyons District",
+        "CTEC",
+        "Social Media",
+        ]
+        
+        files = [
+        "demo",
+        "demo",
+        "demo"
+        ]
+        
+        //Same names as PDF files
+        pdfTopics = [
+        "ImpactUrls",
+        "TopicTerms",
+        "MealDeliveringRobots"
+        ]
+        
+        //Same # of entries as internetTopics
+        addresses = [
+        "https://google.com/",
+        "https://apstudents.collegeboard.org/courses/ap-computer-science-principles",
+        "https://www.canyonsdistrict.org/",
+        "https://ctec.canyonsdistrict.org/",
+        "https://twitter.com/"
+        ]
+    }
+    
+    //MARK:- Lifecycle
+    
+    override func viewDidLoad() -> Void
     {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        setupDetailContents()
+        self.clearsSelectionOnViewWillAppear = false
+    }
+    
+    //MARK:- Handle interaction with the TableView
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: indexPath) -> UITableViewCell
+    {
+        /*Unlike our previous tableview we are not making a custom subclass,
+         just adding text to the default view based on the contents of the lists.
+         */
+        let cell = tableView.dequeueReusableCell(withIdentifier: rowIdentifier, for: IndexPath)
+        
+        cell.textLabel?.textAlignment = .center
+        
+        if (indexPath.section == 0)
+        {
+            cell.textLabel?.text = pdfTopics(indexPath.row)
+        }
+        else
+        {
+            cell.textLabel?.text = internetTopics(indexPath.row)
+        }
+        
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) -> Void
+    {
+        let currentTopic : String
+        let currentAddress : String
+        
+        if (indexPath.section == 0)
+        {
+            currentTopic = pdfTopics[indexPath.row]
+            currentAddress = files[indexPath.row]
+        }
+            
+        else
+        {
+            currentTopic = internetTopics[indexPath.row]
+            currentAddress = addresses[indexPath.row]
+        }
+        
+        delegate?.dataUpdate(title: currentTopic, address: currentAddress)
+        
+        //MARK: Load a view without a segue
+        
+        if let detailViewController = delegate as? InternetDetailViewController
+        {
+            splitViewController?.showDetailViewController(detailViewController, sender: nil)
+        }
+    }
+    
+    //MARK:- Handle section headers
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?
+    {
+        if (section == 0)
+        {
+            return "PDF Reports"
+        }
+        return "Internet Information"
     }
 
-    // MARK: - Table view data source
+    //MARK:- Table view data source methods
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+    override func numberOfSections(in tableView: UITableView) -> Int
+    {
+        return 2
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        if (section == 0)
+        {
+            return pdfTopics.count
+        }
+        else
+        {
+            return internetTopics.count
+        }
     }
 
     /*
@@ -80,7 +190,7 @@ class InternetMasterViewController: UITableViewController
     */
 
     /*
-    // MARK: - Navigation
+    //MARK:- Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
